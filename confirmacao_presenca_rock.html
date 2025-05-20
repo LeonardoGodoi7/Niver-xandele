@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confirmação de Presença</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+    body {
+      font-family: 'Metal Mania', cursive;
+      background: url('e4a30d0c53891a382b7363e21c850946.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container, .agradecimento {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 30px;
+      border: 3px solid crimson;
+      border-radius: 15px;
+      box-shadow: 0 0 25px crimson;
+      text-align: center;
+      max-width: 500px;
+      margin: 5vh auto;
+    }
+    h2 {
+      font-size: 40px;
+      color: crimson;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border: 2px solid crimson;
+      background: #111;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: crimson;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #b30000;
+    }
+    .mensagem {
+      margin-top: 20px;
+      font-weight: bold;
+      color: lime;
+    }
+    .galeria, .dark-images {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 15px;
+      padding: 0 20px;
+    }
+    .galeria img, .dark-images img {
+      width: 100%;
+      height: auto;
+      border: 2px solid crimson;
+      border-radius: 8px;
+    }
+    .caveira-message {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .caveira-message img {
+      width: 300px;
+      max-width: 100%;
+    }
+    .agradecimento {
+      display: none;
+    }
+    .agradecimento h2 {
+      font-size: 32px;
+      color: lime;
+      margin-bottom: 20px;
+    }
+    .agradecimento p {
+      font-size: 20px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="formulario">
+    <h2>CONFIRMAÇÃO DE PRESENÇA</h2>
+    <p>Digite seu nome abaixo para entrar no ritual:</p>
+    <input type="text" id="nome" placeholder="Seu nome, guerreiro do metal">
+    <button onclick="confirmarPresenca()">Confirmar Presença</button>
+    <p class="mensagem" id="mensagem"></p>
+  </div>
+
+  <div class="agradecimento" id="agradecimento">
+    <h2>🔥 PRESENÇA CONFIRMADA! 🔥</h2>
+    <p>Agradeço sua presença, essa noite vai ser louca.<br>Você não vai se arrepender!! 🤘🔥</p>
+
+    <div class="dark-images">
+      <img src="cd216975db2ee5bafe0d276031fd4d67.jpg" alt="Motoqueiro Sinistro">
+      <img src="5fae7ba7dadb0ba3d757d9a61f467f91.jpg" alt="Caveira Armado">
+      <img src="3a50ea548489f1f3757a1a8ea37f3909.jpg" alt="You're Next">
+      <img src="aca990c857341322ae97cd2897a9fada.jpg" alt="Aqui é Rock Porra">
+    </div>
+  </div>
+
+  <div class="caveira-message">
+    <img src="9aac4998a2113264121208b52ea4f712.jpg" alt="Mensagem Rock">
+  </div>
+
+  <div class="galeria">
+    <img src="WhatsApp Image 2025-05-19 at 20.49.22.jpeg" alt="Foto Rock 1">
+    <img src="WhatsApp Image 2025-05-19 at 20.49.22 (1).jpeg" alt="Foto Rock 2">
+    <img src="WhatsApp Image 2025-05-19 at 20.49.22 (2).jpeg" alt="Foto Rock 3">
+    <img src="WhatsApp Image 2025-05-19 at 20.49.22 (3).jpeg" alt="Foto Rock 4">
+    <img src="WhatsApp Image 2025-05-19 at 11.07.45.jpeg" alt="Foto Rock 5">
+  </div>
+
+  <script>
+    function confirmarPresenca() {
+      const nome = document.getElementById('nome').value.trim();
+      if (nome) {
+        document.getElementById('formulario').style.display = 'none';
+        document.getElementById('agradecimento').style.display = 'block';
+      } else {
+        document.getElementById('mensagem').textContent = '⚠️ Digite seu nome para confirmar, guerreiro(a).';
+      }
+    }
+  </script>
+</body>
+</html>
